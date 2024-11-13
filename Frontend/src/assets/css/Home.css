@@ -1,0 +1,48 @@
+:root{
+    --text-color: #e3e3e3;
+}
+.home_section .title {
+    width: fit-content;
+    font-size: 3rem;
+    background-clip: text;
+    background: linear-gradient(to right, #4285f4, #d96570);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.home_section :where(.title, .subtitle) {
+    color:#e3e3e3;
+    font-weight: 500;
+    line-height: 4rem;
+}
+.home_section .subtitle {
+    font-size: 2.6rem;
+    color: #828282;
+}
+.suggestion-list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 9.5vh;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.suggestion-list .suggestion {
+    cursor: pointer;
+    padding: 1.25rem;
+    width: 222px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 0.75rem;
+    justify-content: space-between;
+    background: #383838;
+    transition: 0.2s ease;
+}
+.suggestion-list .suggestion :where(.text, .icon) {
+    font-weight: 400;
+    color: var(--text-color);
+}
