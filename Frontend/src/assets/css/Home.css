@@ -1,9 +1,13 @@
 :root{
-    --text-color: #e3e3e3;
+    --text-color: #E3E3E3;
+    --subheading-color: #828282;
+    --placeholder-color: #A6A6A6;
+    --primary-color: #242424;
+    --secondary-color: #383838;
+    --secondary-hover-color: #444;
 }
 .home_section .title {
     width: fit-content;
-    font-size: 3rem;
     background-clip: text;
     background: linear-gradient(to right, #4285f4, #d96570);
     -webkit-background-clip: text;
@@ -12,18 +16,16 @@
 .home_section :where(.title, .subtitle) {
     color:#e3e3e3;
     font-weight: 500;
-    line-height: 4rem;
 }
 .home_section .subtitle {
-    font-size: 2.6rem;
     color: #828282;
 }
 .suggestion-list {
     width: 100%;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 1.25rem;
-    margin-top: 9.5vh;
     overflow: hidden;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -32,8 +34,6 @@
 .suggestion-list .suggestion {
     cursor: pointer;
     padding: 1.25rem;
-    width: 222px;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -45,4 +45,111 @@
 .suggestion-list .suggestion :where(.text, .icon) {
     font-weight: 400;
     color: var(--text-color);
+}
+.suggestion-list .suggestion .icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+    align-self: flex-end;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    color: var(--text-color);
+    background: var(--primary-color);
+}
+
+.suggestion-list .suggestion :where(.text, .icon) {
+    font-weight: 400;
+    color: var(--text-color);
+}
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.typing-area {
+    padding: 1rem 0;
+    background: var(--primary-color);
+}
+
+.typing-area :where(.typing-form, .action-buttons) {
+    display: flex;
+    gap: 0.75rem;
+}
+.typing-form .input-wrapper {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    position: relative;
+}
+.typing-form .typing-input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 1.1rem 4rem 1.1rem 1.5rem;
+    border-radius: 100px;
+    background: var(--secondary-color);
+}
+.typing-form #send-message-button {
+    position: absolute;
+    right: 0;
+    outline: none;
+    border: none;
+    transform: scale(0);
+    background: transparent;
+    transition: transform 0.2s ease;
+}
+.typing-area .icon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color);
+    transition: 0.2s ease;
+}
+.typing-area :where(.typing-form, .action-buttons) {
+    display: flex;
+    gap: 0.75rem;
+}
+.typing-area .icon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color);
+    transition: 0.2s ease;
+}
+.typing-area .disclaimer-text {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    color: var(--placeholder-color);
 }
